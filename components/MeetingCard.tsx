@@ -44,15 +44,15 @@ const MeetingCard = ({
             <article className={cn("flex justify-center relative", {})}>
                 <div className="relative flex w-full max-sm:hidden">
                     {avatarImages.map((img: string, index: number) => (
-                    <Image
-                        key={index}
-                        src={img}
-                        alt="attendees"
-                        width={40}
-                        height={40}
-                        className={cn("rounded-full", { absolute: index > 0 })}
-                        style={{ top: 0, left: index * 28 }}
-                    />
+                        <Image
+                            key={index}
+                            src={img}
+                            alt="attendees"
+                            width={40}
+                            height={40}
+                            className={cn("rounded-full", { absolute: index > 0 })}
+                            style={{ top: 0, left: index * 28 }}
+                        />
                     ))}
                     <div className="flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-dark-3 bg-dark-4">
                         +5
@@ -65,7 +65,7 @@ const MeetingCard = ({
                         {buttonIcon1 && (
                             <Image src={buttonIcon1} alt="feature" width={20} height={20} />
                         )}
-                    &nbsp; {buttonText}
+                        &nbsp; {buttonText}
                     </Button>
 
                     <Button
